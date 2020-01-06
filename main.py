@@ -20,7 +20,7 @@ def getZipCodes (stateAbbreviation):
     soup = BeautifulSoup(src, 'lxml')
 
     zipCodes = []
-    prevVal = '-1' # the same href val was repeating 3 times for some reason so this eliminates that redundancy
+    prevVal = '-1' # the same href val was repeating 3 times so this eliminates that redundancy
     counter = 0  # keeps track of how many elements to remove from end of arr
     lastHttps = 0
     for div_tag in soup.find_all("div"):
